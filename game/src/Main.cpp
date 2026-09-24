@@ -17,15 +17,19 @@ int main() {
     while(true) {
         if(bn::keypad::left_held()) {
             dot.set_x(dot.x() - speed);
+            dot.set_color(bn::color(0, 31, 0));
         }
         if(bn::keypad::right_held()) {
             dot.set_x(dot.x() + speed);
+            dot.set_color(bn::color(0, 0, 31));
         }
         if(bn::keypad::up_held()) {
             dot.set_y(dot.y() - speed);
+            dot.set_color(bn::color(31, 31, 0));
         }
         if(bn::keypad::down_held()) {
             dot.set_y(dot.y() + speed);
+            dot.set_color(bn::color(0, 31, 31));
         }
         bn::core::update();
     }
