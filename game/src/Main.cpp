@@ -17,19 +17,18 @@ int main() {
     while(true) {
         if(bn::keypad::left_held()) {
             dot.set_x(dot.x() - speed);
-
+            dot.set_visible(true);
         }
         if(bn::keypad::right_held()) {
             dot.set_x(dot.x() + speed);
-
+            dot.set_visible(false);
         }
         if(bn::keypad::up_held()) {
             dot.set_y(dot.y() - speed);
-
+            speed = 1
         }
         if(bn::keypad::down_held()) {
-            dot.set_y(dot.y() + speed);
-
+            speed += 1
         }
         bn::core::update();
     }
