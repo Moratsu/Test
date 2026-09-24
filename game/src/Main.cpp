@@ -25,10 +25,10 @@ int main() {
         }
         if(bn::keypad::up_held()) {
             dot.set_y(dot.y() - speed);
-            speed = 1
+            speed = 1;
         }
         if(bn::keypad::down_held()) {
-            speed += 1
+            speed += 1;
         }
         bn::core::update();
     }
